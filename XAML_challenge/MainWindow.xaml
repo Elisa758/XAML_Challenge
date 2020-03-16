@@ -1,0 +1,43 @@
+﻿<Window x:Class="XAML_challenge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XAML_challenge"
+        mc:Ignorable="d"
+        Title="Challenge" Height="450" Width="800">
+    <Grid VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Left">
+            <ComboBox Name="File" Width="200" Height="30">
+                <Button Width="200" Height="30">
+                    <ComboBoxItem Content="Open"></ComboBoxItem>
+                </Button>
+                <Button Width="200" Height="30">
+                    <ComboBoxItem Content="Save"></ComboBoxItem>
+                </Button>
+                <Separator Height="10"/>
+                <Button Width="200" Height="30">
+                    <ComboBoxItem Content="Exit"></ComboBoxItem>
+                </Button>
+            </ComboBox>
+            <ComboBox x:Name="About" Width="200" Height="30">
+                <ComboBoxItem Content="About my boss"/>
+                <Separator Height="10"/>
+                <ComboBoxItem Content="Help"/>
+            </ComboBox>
+        </StackPanel>
+
+        <TextBox Grid.Row="1" VerticalAlignment="Center" FontSize="12" AcceptsReturn="True" TextWrapping="Wrap" Height="100" Margin="0,17.836,0,-105.641">
+            Enter your text here.
+        </TextBox>
+    </Grid>
+
+</Window>
